@@ -160,4 +160,13 @@ It is running on the localhost machine on PORT = 5000.
 | `varid`      | `string` | **Required**. id of variant to delete |
 
 
+# Search product 
+
+```http
+   GET /search?q=name
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` | **Required**.name is required  name either can be Product name , product description or product variant name|
 
