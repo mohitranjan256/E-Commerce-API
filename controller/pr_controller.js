@@ -25,13 +25,13 @@ exports.getProducts = async (req, res) => {
 exports.getProductById = async (req, res) => {
     try {
         const productId = req.params.id;
-        const product = await Product.findById(productId);
+        const product = await Product.find({"_id" : productId},{variants :0});
         if (!product) {
             return res.status(404).json({ error: 'Product not found' });
         }
         res.json(product);
     } catch (err) {
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: err.message });
     }
 };
 
