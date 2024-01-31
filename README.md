@@ -20,7 +20,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd E-Commerce API
+  cd E-Commerce-API
 ```
 
 Install dependencies
