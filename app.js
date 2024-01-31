@@ -18,8 +18,10 @@ app.use(bodyParser.json());
 const def = require('./routes/default');
 const prRoutes = require('./routes/pr_routes.js');
 const varRoutes = require('./routes/var_routes.js');
+const search= require('./routes/search.js')
 
 app.use('/', def);
 
 app.use('/products', prRoutes);
 app.use('/products/:prId/var', varRoutes);
+app.use('/search',search);
