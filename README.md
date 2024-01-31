@@ -67,6 +67,7 @@ It is running on the localhost machine on PORT = 5000.
 ```http
   POST /products
 ```
+![http___localhost_5000_products - My Workspace 31-01-2024 06_35_23](https://github.com/mohitranjan256/E-Commerce-API/assets/84243917/7e21200d-27c8-4ba9-a22f-6dd298aa5471)
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -121,6 +122,7 @@ It is running on the localhost machine on PORT = 5000.
 ```http
   POST /products/:prid/var
 ```
+![http___localhost_5000_products_65b9a0e5d5c4b6246c5ffb90_var - My Workspace 31-01-2024 07_33_00](https://github.com/mohitranjan256/E-Commerce-API/assets/84243917/17b4fa84-974c-43c0-baa4-644ebabc0bcb)
 
 
 | Parameter | Type     | Description                       |
