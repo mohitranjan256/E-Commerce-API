@@ -65,38 +65,3 @@ exports.deleteProduct = async (req, res) => {
     }
 };
 
-exports.searchProducts = async (req, res) => {
-    try {
-        const query = req.query.q.toLowerCase();
-        const results = await Product.find({
-          $or: [
-            { 'name': { $regex: query, $options: 'i' } },
-            { 'description': { $regex: query, $options: 'i' } },
-            { 'variants.name': { $regex: query, $options: 'i' } },
-          ],
-        });
-        res.json(results);
-      } catch (err) {
-        res.status(500).json({ error: err.message });
-      }
-};
-// exports.searchProducts=async (req,res)=>{
-//     try{
-//         const query = req.query.q || '';
-//         const results = Product.filter((product) => {
-//             return (
-//             product.name.toLowerCase().includes(query.toLowerCase()) ||
-//             product.description.toLowerCase().includes(query.toLowerCase()) ||
-//             product.variants.some(
-//                 (variant) => variant.name.toLowerCase().includes(query.toLowerCase())
-//             )
-//             );
-//         });
-
-//   res.json({ results });
-
-//     }catch(error){
-//         console.log(error);
-//         res.status(500).json({success:false,msg:"Internal server error"});
-//     }
-// }
